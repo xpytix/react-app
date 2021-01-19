@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
+import AboutUs from "./AboutUs";
+import {Link} from "react-scroll";
 
 function Navbar() {
     const [click, setClick] = useState(false);
@@ -28,21 +29,41 @@ function Navbar() {
         <>
             <nav className='navbar'>
                 <div className='navbar-container'>
-                    <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                        <h1>Centrum druku Pińczów </h1> <i className="fas fa-palette"></i>
+                    <Link  activeClass="active"
+                           to="hero"
+                           spy={true}
+                           smooth={true}
+                           offset={-50}
+                           duration={500}
+                           className='navbar-logo'
+                           onClick={closeMobileMenu}>
+                        <h1>Centrum druku </h1> <i className="fas fa-palette"></i>
                     </Link>
                     <div className='menu-icon' onClick={handleClick}>
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                         <li className='nav-item'>
-                            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                            <Link
+                                activeClass="active"
+                                to="hero"
+                                spy={true}
+                                smooth={true}
+                                offset={-50}
+                                duration={500}
+                                className='nav-links'
+                                onClick={closeMobileMenu}>
                                 Start
                             </Link>
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/o-nas'
+                                activeClass="active"
+                                to="about"
+                                spy={true}
+                                smooth={true}
+                                offset={-50}
+                                duration={500}
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
@@ -51,7 +72,12 @@ function Navbar() {
                         </li>
                         <li className='nav-item'>
                             <Link
-                                to='/warsztaty'
+                                activeClass="active"
+                                to="service"
+                                spy={true}
+                                smooth={true}
+                                offset={-50}
+                                duration={500}
                                 className='nav-links'
                                 onClick={closeMobileMenu}
                             >
@@ -61,7 +87,6 @@ function Navbar() {
 
                         <li>
                             <Link
-                                to='/rejestracja'
                                 className='nav-links-mobile'
                                 onClick={closeMobileMenu}
                             >

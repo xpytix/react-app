@@ -8,8 +8,8 @@ import img4 from '../Images/4.jpg';
 import img5 from '../Images/5.jpg';
 function Cards() {
     return (
-        <div className='cards'>
-            <h1>Check out these EPIC Destinations!</h1>
+        <div className='cards' id="service">
+            <h1>Co możemy dla Ciebie zrobić?</h1>
             <div className='cards__container'>
                 <div className='cards__wrapper'>
                     <ul className='cards__items'>

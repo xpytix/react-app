@@ -1,11 +1,10 @@
 import React from 'react';
-import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
 import video1 from '../videos/printing.mp4'
 function HeroSection() {
     return (
-        <div className='hero-container'>
+        <div className='hero-container' id='hero'>
             <video playsInline autoPlay loop muted >
                 <source src={video1}  type='video/mp4'/>
             </video>
