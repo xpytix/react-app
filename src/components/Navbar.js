@@ -87,6 +87,12 @@ function Navbar() {
 
                         <li>
                             <Link
+                                activeClass="active"
+                                to="contact-page"
+                                spy={true}
+                                smooth={true}
+                                offset={-100}
+                                duration={500}
                                 className='nav-links-mobile'
                                 onClick={closeMobileMenu}
                             >
@@ -94,7 +100,7 @@ function Navbar() {
                             </Link>
                         </li>
                     </ul>
-                    {button && <Button buttonStyle='btn--outline'>Kontakt</Button>}
+                    {button && <Button buttonStyle='btn--outline' type="link">Kontakt</Button>}
                 </div>
             </nav>
         </>

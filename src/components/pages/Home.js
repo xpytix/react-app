@@ -4,6 +4,7 @@ import HeroSection from '../HeroSection';
 import Cards from "../Card";
 import Footer from "../Footer";
 import AboutUs from "../AboutUs";
+import Contact from "../Contact";
 
 
 function Home() {
@@ -12,7 +13,7 @@ function Home() {
             <HeroSection />
             <AboutUs/>
             <Cards/>
-
+            <Contact/>
             <Footer/>
         </>
     );

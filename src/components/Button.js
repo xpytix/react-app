@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './Button.css';
+import {Link} from "react-scroll";
 
 
 const STYLES = ['btn--primary', 'btn--outline', 'btn--test'];
@@ -22,13 +23,25 @@ export const Button = ({
 
     return (
         <a className='btn-mobile'>
-            <button
-                className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-                onClick={onClick}
-                type={type}
-            >
-                {children}
-            </button>
+            {
+                type ==="link" ? <Link  className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                                        activeClass="active"
+                                        to="contact-page"
+                                        spy={true}
+                                        smooth={true}
+                                        offset={-50}
+                                        duration={500} >
+                    {children}
+                </Link> :
+                    <button
+                        className={`btn ${checkButtonStyle} ${checkButtonSize}`}
+                        onClick={onClick}
+                        type={type}
+                    >
+                        {children}
+                    </button>
+            }
+
         </a>
     );
 };

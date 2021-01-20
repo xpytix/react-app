@@ -29,6 +29,9 @@ img{
 }
 .section {
     padding: 4rem 0 3rem 0;
+
+}
+.aboutUs{
     border-bottom: 1px solid black;
 }
 @media (min-width: 981px){
